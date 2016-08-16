@@ -423,7 +423,9 @@ function! s:ClangQuickFix()
     if l:list == []
       cclose
     else
-      copen
+    "  copen
+      cclose
+      botright copen
     endif
 
     let l:winbufnr = bufwinnr(l:bufnr)

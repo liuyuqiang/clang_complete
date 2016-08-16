@@ -426,6 +426,10 @@ function! s:ClangQuickFix()
     "  copen
       cclose
       botright copen
+      if exists("g:loaded_nerdtree_autoload")
+        NERDTreeClose
+        NERDTree
+      endif
     endif
 
     let l:winbufnr = bufwinnr(l:bufnr)
